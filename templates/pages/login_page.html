@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+{% load static %}
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with FoodHut landing page.">
+    <title>FoodHut</title>
+   
+    <!-- font icons {% static '' %} -->
+    <link rel="stylesheet" href="{% static 'vendors/themify-icons/css/themify-icons.css' %}">
+
+    <link rel="stylesheet" href="{% static 'vendors/animate/animate.css' %}">
+
+    <!-- Bootstrap + FoodHut main styles -->
+	<link rel="stylesheet" href="{% static 'css/foodhut.css' %}  ">
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+    
+    <!-- Navbar -->
+    <nav class="custom-navbar navbar navbar-expand-lg navbar-dark fixed-top" data-spy="affix" data-offset-top="10">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            
+            {% include 'pages/messages.html' %}
+            <a class="navbar-brand m-auto align-items-center justify-content-center" href="{% url 'index' %}">
+                <img src="{% static 'imgs/logo.svg' %}" class="brand-img" alt="">
+                <span class="brand-txt">Food Hut</span>
+            </a>
+        </div>
+    </nav>
+
+    <br>
+    <br>
+    <br>
+
+
+    <section class="vh-100" style="background-color: dark">
+        <div class="container py-5 h-100" style="background-color: dark">
+          <div class="row d-flex justify-content-center align-items-center h-100" style="background-color: dark">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5" style="background-color: dark">
+              <div class="card shadow-2-strong" style="background-color: dark;">
+                <div class="card-body text-center bg-dark text-white" style="background-color: dark">
+      
+                  <h3 class="mb-5">Sign in</h3>
+      
+                  <div class="form-outline mb-4">
+                    <input type="email" id="typeEmailX-2" class="form-control form-control-lg" />
+                    <label class="form-label" for="typeEmailX-2">Email</label>
+                  </div>
+      
+                  <div class="form-outline mb-4">
+                    <input type="password" id="typePasswordX-2" class="form-control form-control-lg" />
+                    <label class="form-label" for="typePasswordX-2">Password</label>
+                  </div>
+      
+                  <!-- Checkbox -->
+                  <div class="form-check d-flex justify-content-start mb-4">
+                    <input class="form-check-input" type="checkbox" value="" id="form1Example3" />
+                    <label class="form-check-label" for="form1Example3"> Remember password </label>
+                  </div>
+      
+                  <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
+      
+                  <hr class="my-4">
+
+                  <div>
+                    <p class="mb-0">Don't have an account? <a href="#!" class="text-white-50 fw-bold">Sign Up</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    {% block content %}
+
+    {% endblock %}
+
+</body>
+</html>
